@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Actividad 2.2.2.1 - Ecuaciones Diferenciales</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;800&family=Quicksand:wght@500;700&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Quicksand',sans-serif;background:linear-gradient(180deg,#FFF5F7,#FFF9E6,#E8F8FF);color:#3a2a4d;line-height:1.7}
+header{background:linear-gradient(135deg,#FF8FAB,#B388FF,#7AC6FF);color:white;text-align:center;padding:55px 20px 40px;border-radius:0 0 45px 45px;box-shadow:0 15px 35px rgba(179,136,255,.35)}
+header h1{font-family:'Poppins';font-size:38px;line-height:1.1}
+header p{max-width:650px;margin:14px auto 0;font-weight:600;opacity:.95}
+.badge{background:white;color:#B388FF;padding:8px 18px;border-radius:50px;font-weight:800;font-size:12px;letter-spacing:1px}
+main{max-width:920px;margin:0 auto;padding:20px 15px}
+.card{background:white;border-radius:28px;padding:28px;margin-bottom:26px;box-shadow:0 10px 30px rgba(0,0,0,.07);border:3px solid white}
+.card h2{font-family:'Poppins';font-size:24px;margin-bottom:8px}
+.card img{width:100%;border-radius:20px;border:4px solid #f5f0ff;box-shadow:0 8px 20px rgba(0,0,0,.08);margin:12px 0}
+.tag{display:inline-block;padding:5px 12px;border-radius:50px;font-size:11px;font-weight:800;background:#F3EFFF;color:#7c3aed}
+.formula{background:#2D1B4E;color:#FFD6E8;padding:14px 16px;border-radius:16px;margin:12px 0;font-size:14px}
+.formula b{color:white}
+.btn{display:inline-block;background:linear-gradient(135deg,#FF8FAB,#B388FF);color:white;padding:10px 20px;border-radius:50px;text-decoration:none;font-weight:800;font-size:14px;margin-top:8px;box-shadow:0 6px 15px rgba(179,136,255,.4)}
+footer{text-align:center;padding:24px;background:#2D1B4E;color:white;border-radius:35px 35px 0 0}
+@media(max-width:600px){header h1{font-size:26px}.card{padding:18px}}
+</style>
+</head>
+<body>
+<header>
+  <span class="badge">✨ ACTIVIDAD 2.2.2.1 • ECUACIONES DIFERENCIALES</span>
+  <h1>Campo de Direcciones y<br>Familia de Curvas Solución</h1>
+  <p>4 modelos reales graficados en Python con Matplotlib: calor, tubería, fricción y crecimiento poblacional.</p>
+</header>
+
+<main>
+  <div class="card">
+    <span class="tag">EJERCICIO 1 • CALOR</span>
+    <h2>🌡️ 1) Difusión de Calor</h2>
+    <div class="formula"><b>Ecuación:</b> dT/dt = -k(T - Tamb) &nbsp; | &nbsp; <b>Solución:</b> T(t) = Tamb + C·e<sup>-kt</sup> &nbsp; | &nbsp; k=0.5, Tamb=20°C</div>
+    <img src="grafica1.png" alt="Gráfica calor">
+    <p><b>¿Qué se ve?</b> Todas las curvas se acercan a 20°C. Si el cuerpo está caliente se enfría, si está frío se calienta. El equilibrio es estable.</p>
+    <a class="btn" href="grafica1.png" target="_blank">Ver imagen en grande ↗</a>
+  </div>
+
+  <div class="card">
+    <span class="tag">EJERCICIO 2 • FLUIDOS</span>
+    <h2>🚰 2) Flujo en Tubería Horizontal</h2>
+    <div class="formula"><b>Ecuación:</b> dv/dx = -(f/2D)·v|v| &nbsp; | &nbsp; <b>Solución:</b> v(x) = 1 / (a·x + C) &nbsp; | &nbsp; a = 0.3</div>
+    <img src="grafica2.png" alt="Gráfica tubería">
+    <p><b>¿Qué se ve?</b> La velocidad siempre disminuye por fricción. Si v&gt;0 baja hacia 0, si v&lt;0 se hace más negativa.</p>
+    <a class="btn" href="grafica2.png" target="_blank">Ver imagen en grande ↗</a>
+  </div>
+
+  <div class="card">
+    <span class="tag">EJERCICIO 3 • MOVIMIENTO</span>
+    <h2>🏃 3) Movimiento bajo Fricción Lineal</h2>
+    <div class="formula"><b>Ecuación:</b> dv/dt = -b·v + F &nbsp; | &nbsp; <b>Solución:</b> v(t) = F/b + C·e<sup>-bt</sup> &nbsp; | &nbsp; b=0.5, F=5, v*=10</div>
+    <img src="grafica3.png" alt="Gráfica fricción">
+    <p><b>¿Qué se ve?</b> No importa dónde empieces, todas las curvas terminan en v = 10. Es la velocidad terminal.</p>
+    <a class="btn" href="grafica3.png" target="_blank">Ver imagen en grande ↗</a>
+  </div>
+
+  <div class="card">
+    <span class="tag">EJERCICIO 4 • POBLACIÓN</span>
+    <h2>👥 4) Crecimiento Poblacional Logístico</h2>
+    <div class="formula"><b>Ecuación:</b> dN/dt = r·N(1 - N/K) &nbsp; | &nbsp; <b>Solución:</b> N(t) = K / (1 + C·e<sup>-rt</sup>) &nbsp; | &nbsp; r=0.8, K=6 millones</div>
+    <img src="grafica4.png" alt="Gráfica logístico">
+    <p><b>¿Qué se ve?</b> Forma de S. Crece rápido al inicio y luego se frena al llegar a la capacidad máxima K=6 millones.</p>
+    <a class="btn" href="grafica4.png" target="_blank">Ver imagen en grande ↗</a>
+  </div>
+
+  <div class="card" style="text-align:center;background:linear-gradient(135deg,#FFD6E8,#C5CAE9)">
+    <h2>🐍 Código en Python</h2>
+    <p>Hecho con <b>NumPy + Matplotlib</b> • Campo de direcciones con <code>quiver</code> + curvas solución</p>
+    <a class="btn" href="https://github.com" target="_blank">Mi GitHub ↗</a>
+  </div>
+</main>
+<footer>Hecho con ❤️ en Python + GitHub Pages • Actividad 2.2.2.1</footer>
+</body>
+</html>
